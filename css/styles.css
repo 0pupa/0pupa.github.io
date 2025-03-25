@@ -28,16 +28,16 @@ header {
 }
 
 .foto {
-    width: 40px;
-    height: 40px;
+    width: 60px; /* Aumento del tamaño de la foto */
+    height: 60px; /* Aumento del tamaño de la foto */
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px; /* Aumento del margen entre la foto y el nombre */
     transition: opacity 0.5s ease; /* Transición suave para desaparecer la foto */
 }
 
 .nombre {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Tamaño de fuente para el nombre aumentado */
     opacity: 0;
     transition: opacity 0.5s ease; /* Transición suave para aparecer el nombre */
 }
