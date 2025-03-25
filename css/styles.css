@@ -14,9 +14,9 @@ body {
 
 header {
     position: absolute;
-    top: 50px; /* Espacio añadido desde la parte superior */
+    top: 50px; 
     left: 50%;
-    transform: translateX(-50%); /* Centra el icono en el top */
+    transform: translateX(-50%); 
     z-index: 10;
 }
 
@@ -28,27 +28,27 @@ header {
 }
 
 .foto {
-    width: 60px; /* Aumento del tamaño de la foto */
-    height: 60px; /* Aumento del tamaño de la foto */
+    width: 60px; 
+    height: 60px; 
     border-radius: 50%;
-    margin-right: 15px; /* Aumento del margen entre la foto y el nombre */
-    transition: opacity 0.5s ease; /* Transición suave para desaparecer la foto */
+    margin-right: 15px; 
+    transition: opacity 0.5s ease; 
 }
 
 .nombre {
     display: none;
-    font-size: 1.75rem; /* Tamaño de fuente para el nombre aumentado */
+    font-size: 1.75rem; 
     opacity: 0;
-    transition: opacity 0.5s ease; /* Transición suave para aparecer el nombre */
+    transition: opacity 0.5s ease; 
 }
 
 .icono:hover .foto {
-    opacity: 0; /* La foto desaparece al pasar el ratón */
+    opacity: 0; 
 }
 
 .icono:hover .nombre {
     display: inline;
-    opacity: 1; /* El nombre aparece suavemente */
+    opacity: 1; 
 }
 
 @keyframes aparecerIcono {
@@ -73,9 +73,9 @@ header {
 }
 
 .caja {
-    width: 300px; /* Aumento del ancho de las cajas */
-    height: 80px; /* Altura más pequeña */
-    margin: 15px 0; /* Separación entre las cajas */
+    width: 300px;
+    height: 80px; 
+    margin: 15px 0; 
     padding: 0 20px;
     display: flex;
     justify-content: center;
@@ -86,10 +86,10 @@ header {
     transition: transform 0.5s ease, filter 0.5s ease;
     filter: grayscale(100%);
     color: white;
-    font-size: 1.25rem; /* Fuente ajustada */
+    font-size: 1.25rem; 
     border-radius: 8px;
-    opacity: 1; /* Aseguramos que las cajas son visibles */
-    animation: aparecerCaja 2s ease-out forwards; /* Animación para las cajas */
+    opacity: 1; 
+    animation: aparecerCaja 2s ease-out forwards;
 }
 
 .caja:hover {
@@ -118,5 +118,32 @@ header {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        top: 20px;
+    }
+
+    .foto {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .nombre {
+        font-size: 1.5rem; 
+    }
+
+    .caja {
+        width: 80%; 
+        height: 70px; 
+        filter: grayscale(0%); 
+        transform: none; 
+    }
+
+    .texto {
+        font-size: 1rem; 
+        opacity: 1;
     }
 }
