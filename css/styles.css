@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    position: absolute;
+    top: 50px; /* Espacio añadido desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el icono en el top */
+    z-index: 10;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: aparecerIcono 1s ease-out forwards;
+}
+
+.foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: opacity 0.5s ease; /* Transición suave para desaparecer la foto */
+}
+
+.nombre {
+    display: none;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Transición suave para aparecer el nombre */
+}
+
+.icono:hover .foto {
+    opacity: 0; /* La foto desaparece al pasar el ratón */
+}
+
+.icono:hover .nombre {
+    display: inline;
+    opacity: 1; /* El nombre aparece suavemente */
+}
+
+@keyframes aparecerIcono {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para las cajas */
+.cajas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.caja {
+    width: 300px; /* Aumento del ancho de las cajas */
+    height: 80px; /* Altura más pequeña */
+    margin: 15px 0; /* Separación entre las cajas */
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(100%);
+    color: white;
+    font-size: 1.25rem; /* Fuente ajustada */
+    border-radius: 8px;
+    opacity: 1; /* Aseguramos que las cajas son visibles */
+    animation: aparecerCaja 2s ease-out forwards; /* Animación para las cajas */
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.texto {
+    font-size: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.caja:hover .texto {
+    opacity: 1;
+}
+
+@keyframes aparecerCaja {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
