@@ -1,0 +1,300 @@
+/* Estilos específicos para la página Sobre mí */
+
+body {
+    height: auto;
+    min-height: 100vh;
+}
+
+.contenedor-sobremin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Sección de presentación */
+.seccion-presentacion {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: aparecerIcono 1s ease-out forwards;
+}
+
+.titulo-principal {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    margin: 0;
+    opacity: 0.5;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.linea-separadora {
+    width: 80px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 30px auto 0 auto;
+}
+
+/* Sección biografía */
+.seccion-biografia {
+    width: 100%;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: aparecerCaja 2s ease-out 0.2s forwards;
+}
+
+.titulo-seccion {
+    font-size: 1.6rem;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.texto-biografia {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.75;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Sección de aspectos */
+.seccion-aspectos {
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: aparecerCaja 2s ease-out 0.4s forwards;
+}
+
+.grid-aspectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.aspecto {
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background-color: transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.aspecto:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: none;
+    box-shadow: none;
+}
+
+.nombre-aspecto {
+    font-size: 1.3rem;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.descripcion-aspecto {
+    font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.6;
+    line-height: 1.5;
+}
+
+/* Sección contacto */
+.seccion-contacto {
+    width: 100%;
+    opacity: 0;
+    animation: aparecerCaja 2s ease-out 0.4s forwards;
+}
+
+.enlaces-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.enlace-contacto {
+    display: inline-block;
+    padding: 12px 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+.enlace-contacto:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+    opacity: 0.9;
+    padding-left: 5px;
+}
+
+.etiqueta {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 10;
+}
+
+.volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.95rem;
+    opacity: 0;
+    animation: aparecerIcono 1s ease-out 0.5s forwards;
+}
+
+.volver:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+}
+
+/* Media queries para responsividad */
+@media only screen and (max-width: 768px) {
+    .contenedor-sobremin {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .texto-biografia {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .grid-aspectos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .aspecto {
+        padding: 20px;
+    }
+
+    .enlace-contacto {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    .frase-destacada {
+        font-size: 1rem;
+        padding: 25px;
+    }
+
+    footer {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .volver {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contenedor-sobremin {
+        padding-top: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .titulo-principal {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitulo {
+        font-size: 0.9rem;
+    }
+
+    .linea-separadora {
+        width: 60px;
+        margin-top: 15px;
+    }
+
+    .titulo-seccion {
+        font-size: 1.25rem;
+    }
+
+    .texto-biografia {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .grid-aspectos {
+        gap: 15px;
+    }
+
+    .aspecto {
+        padding: 15px;
+    }
+
+    .nombre-aspecto {
+        font-size: 1.1rem;
+    }
+
+    .descripcion-aspecto {
+        font-size: 0.85rem;
+    }
+
+    .enlace-contacto {
+        padding: 8px 0;
+        font-size: 0.85rem;
+    }
+
+    .frase-destacada {
+        font-size: 0.95rem;
+        padding: 20px;
+    }
+}
